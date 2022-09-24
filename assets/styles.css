@@ -59,9 +59,25 @@
 
 h2 {
     font-family: "Open Sans", sans-serif;
+
+    border-right: solid 3px #74e999;
+    display: inline !important; 
+    width: auto;
+    height: 40px;
+    padding-right: 5px;
+
+    /* Animation */
+    animation: animated-cursor 1s infinite;
+    animation-delay: 2300ms;
 }
 
 p{
     font-family: "Open Sans", sans-serif;
     text-align: center;
+}
+
+@keyframes animated-cursor {
+    50% {
+        border-right-color: transparent;
+    }
 }

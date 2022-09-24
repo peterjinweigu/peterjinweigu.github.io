@@ -1,0 +1,67 @@
+/* https://css-tricks.com/css-link-hover-effects/ */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.nav-link {
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.nav-link::before {
+    background-color: #74e999;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.nav-link::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #74e999;
+}
+
+.nav-link:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+.nav-link:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.nav-link span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.nav-link:hover span {
+    transform: translate3d(-200%, 0, 0);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+}
+
+p{
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}

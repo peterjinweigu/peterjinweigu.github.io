@@ -76,6 +76,26 @@ p{
     text-align: center;
 }
 
+.exp-box{
+    outline: transparent;
+    outline-offset: 20px;
+}
+
+.exp-box:hover{
+    animation: wrap 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes wrap {
+    0%{
+        outline: solid 3px rgba(116, 233, 153, 0)
+    }
+    100%{
+        outline: solid 3px rgba(116, 233, 153, 1)
+    }
+}
+
+
 @keyframes animated-cursor {
     50% {
         border-right-color: transparent;

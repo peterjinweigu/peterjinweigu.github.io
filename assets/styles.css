@@ -1,6 +1,10 @@
 /* https://css-tricks.com/css-link-hover-effects/ */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+html {
+	scroll-behavior: smooth;
+}
+
 .nav-link {
     font-size: 20px;
     overflow: hidden;
@@ -85,6 +89,24 @@ p{
     animation: wrap 1s;
     animation-fill-mode: forwards;
 }
+
+.container{
+    margin-top: 200px;
+}
+
+.container-bg{
+    background-color: rgb(241, 250, 255);
+    height: 100%;
+    width: 100%;
+    outline: solid 100px rgb(241, 250, 255);
+    scroll-margin-top: 1em;
+}
+
+.proj-link{
+    text-align: center;
+    margin-left: 150px;
+}
+
 
 @keyframes wrap {
     0%{

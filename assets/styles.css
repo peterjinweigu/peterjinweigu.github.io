@@ -28,6 +28,7 @@ html {
   transform: scaleX(0);
   transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
+
 .nav-link::after {
   content: attr(data-replace);
   height: 100%;
@@ -99,6 +100,11 @@ p {
   background-color: rgb(241, 250, 255);
   height: 100%;
   outline: solid 100px rgb(241, 250, 255);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
 }
 
 .proj-link {
